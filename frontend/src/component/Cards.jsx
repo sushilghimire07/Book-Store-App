@@ -1,12 +1,12 @@
 import React from "react";
 
+
 function Cards({ item }) {
   return (
     <>
       <div className="mt-[60px] my-3 p-3 flex justify-center"> {/* Center card nicely */}
         <div className="card w-full max-w-xs bg-base-100 shadow-xl hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border">
-          {/* w-full = take full width of parent
-              max-w-xs = maximum width (20rem = 320px) */}
+          
           <figure>
             <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
           </figure>
