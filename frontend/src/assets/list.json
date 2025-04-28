@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Winterfell Tales",
+    "title": "Rise of the Northern Lords",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 2,
+    "name": "Dragon’s Wrath",
+    "title": "Firestorm Over Westeros",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 3,
+    "name": "Knights of the Realm",
+    "title": "The Oath and The Sword",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 4,
+    "name": "Crown and Betrayal",
+    "title": "The Fall of Great Houses",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 5,
+    "name": "The Iron Throne",
+    "title": "Clash of Kings and Queens",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 6,
+    "name": "Legends of the Wall",
+    "title": "The Night Watchers",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 7,
+    "name": "Stormborn",
+    "title": "Journey Across the Narrow Sea",
+    "price": 50,
+    "category": "Sports",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 8,
+    "name": "Whispers of Westeros",
+    "title": "Tales from the Shadows",
+    "price": 20,
+    "category": "Entertainment",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 9,
+    "name": "Battle of Bastards",
+    "title": "War for the North",
+    "price": 30,
+    "category": "Sports",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 10,
+    "name": "Sword in the Darkness",
+    "title": "Night’s Watch Saga",
+    "price": 15,
+    "category": "Entertainment",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 11,
+    "name": "Wildfire Assault",
+    "title": "The Green Inferno",
+    "price": 25,
+    "category": "Adventure",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 12,
+    "name": "March of the Direwolves",
+    "title": "Wolves of the North",
+    "price": 10,
+    "category": "Adventure",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 13,
+    "name": "Sands of Dorne",
+    "title": "Battle Under the Sun",
+    "price": 40,
+    "category": "Sports",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 14,
+    "name": "Ravens' Secrets",
+    "title": "Messages from the Unknown",
+    "price": 18,
+    "category": "Entertainment",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 15,
+    "name": "Thronebreakers",
+    "title": "The Rise of Rebels",
+    "price": 60,
+    "category": "Adventure",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 16,
+    "name": "Frozen North",
+    "title": "The Long Winter",
+    "price": 35,
+    "category": "Adventure",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 17,
+    "name": "Blood and Gold",
+    "title": "Wealth of Westeros",
+    "price": 45,
+    "category": "Entertainment",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 18,
+    "name": "The Red Keep",
+    "title": "Mysteries of King's Landing",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 19,
+    "name": "Fire and Blood",
+    "title": "The Age of Dragons",
+    "price": 55,
+    "category": "Sports",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  },
+  {
+    "id": 20,
+    "name": "Vows and Honor",
+    "title": "Knights of Valor",
+    "price": 70,
+    "category": "Adventure",
+    "image": "https://img.freepik.com/free-photo/arrangement-with-books-dark-background_23-2148898276.jpg?t=st=1745836227~exp=1745839827~hmac=e10db502035a04fbb07854fe65190e049e865752674668f9aa889d0a84fd5afc&w=1380"
+  }
+]
