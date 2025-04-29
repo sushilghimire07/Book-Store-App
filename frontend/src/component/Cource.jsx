@@ -23,6 +23,14 @@ function Course() {
           </p>
           
         </div>
+        
+       <Link to={'/'}>
+        <div className="flex justify-center mt-6">
+                <button className=" cursor-pointer bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">
+                    Back to home
+                </button>
+            </div>
+       </Link>
 
        
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">

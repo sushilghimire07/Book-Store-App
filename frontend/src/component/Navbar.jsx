@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import Login from './Login';
 
 export const Navbar = () => {
+ 
+
   const navItems = (
     <>
       <li><a href='/'>Home</a></li>
@@ -12,11 +15,12 @@ export const Navbar = () => {
 
   const handleThemeToggle = (e) => {
     if (e.target.checked) {
-      document.documentElement.setAttribute('data-theme', 'synthwave'); // dark mode
+      document.documentElement.setAttribute('data-theme', 'synthwave'); 
     } else {
-      document.documentElement.setAttribute('data-theme', 'light'); // light mode
+      document.documentElement.setAttribute('data-theme', 'light'); 
     }
   };
+  
 
   const [stickey, setStickey] = useState(false);
 
@@ -105,7 +109,10 @@ export const Navbar = () => {
         </label>
 
         {/* Login Button */}
-        <a className="btn btn-primary">Login</a>
+          <a className="btn btn-primary" onClick={()=>{
+          document.getElementById('my_modal_3').showModal()}
+          }>Login</a>
+          <Login/>
 
       </div>
 
