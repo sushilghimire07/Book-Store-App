@@ -29,7 +29,8 @@ const Contact = () => {
           <h2 className="text-3xl font-bold text-center mb-8 text-black dark:text-white">Contact Us</h2>
 
           {success && (
-            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 text-center">
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded 
+            mb-6 text-center">
               Your message has been sent successfully!
             </div>
           )}
@@ -41,7 +42,9 @@ const Contact = () => {
               <input
                 type="text"
                 {...register("name", { required: "Name is required" })}
-                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 
+                text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 
+                focus:ring-blue-500"
                 placeholder="John Doe"
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
@@ -59,7 +62,8 @@ const Contact = () => {
                     message: "Invalid email format",
                   },
                 })}
-                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700
+                 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="you@example.com"
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
@@ -71,7 +75,9 @@ const Contact = () => {
               <input
                 type="text"
                 {...register("subject", { required: "Subject is required" })}
-                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white 
+                dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none 
+                focus:ring-2 focus:ring-blue-500"
                 placeholder="Reason for contacting"
               />
               {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>}
@@ -89,7 +95,9 @@ const Contact = () => {
                     message: "Message should be at least 10 characters",
                   },
                 })}
-                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white 
+                dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none 
+                focus:ring-2 focus:ring-blue-500 resize-none"
                 placeholder="Write your message here..."
               />
               {errors.message && (
@@ -104,7 +112,9 @@ const Contact = () => {
                 <input
                   type="date"
                   {...register("date")}
-                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white
+                   dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none
+                    focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="flex-1">
@@ -112,7 +122,9 @@ const Contact = () => {
                 <input
                   type="time"
                   {...register("time")}
-                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 dark:border-gray-600 
+                  bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-lg
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -121,7 +133,8 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                className="bg-blue-600 text-white font-semibold
+                 px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
               >
                 Send Message
               </button>
