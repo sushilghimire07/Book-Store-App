@@ -34,13 +34,7 @@ function Course() {
             <span className="text-pink-500">Here! :)</span>
           </h1>
           <p className="mt-12">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-            assumenda? Repellendus, iste corrupti? Tempore laudantium
-            repellendus accusamus accusantium sed architecto odio, nisi expedita
-            quas quidem nesciunt debitis dolore non aspernatur praesentium
-            assumenda sint quibusdam, perspiciatis, explicabo sequi fugiat amet
-            animi eos aut. Nobis quisquam reiciendis sunt quis sed magnam
-            consequatur!
+          Unlock your full potential by enrolling in our expertly designed courses. Whether you're looking to upskill for career advancement, explore new interests, or dive deep into a specific field, we’ve got the right course for you. Our courses are crafted to provide you with the tools, knowledge, and confidence to excel in today’s fast-paced world.
           </p>
           
         </div>
