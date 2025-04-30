@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Navbar } from "../component/Navbar";
+import  Navbar  from "../component/Navbar";
 import { Footer } from "../component/Footer";
 
 const Contact = () => {

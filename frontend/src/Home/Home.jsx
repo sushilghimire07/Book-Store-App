@@ -1,9 +1,9 @@
 import React from 'react'
-import {Navbar} from './../component/Navbar'
+import Navbar from './../component/Navbar'
 import {Banner} from './../component/Banner'
 import {Footer} from './../component/Footer'
 import { Freebook } from './../component/Freebook';
-import Course from '../component/Cource';
+import Course from '../component/Course';
 
 const Home = () => {
   return (

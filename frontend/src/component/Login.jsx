@@ -1,26 +1,49 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from 'axios';
+import toast from "react-hot-toast";
+import { useAuth } from "../context/AuthProvider";
 
 function Login() {
+  const [, setAuthUser] = useAuth(); // Only need the setter
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  // Simple login handler
-  const onSubmit = (data) => {
-    console.log("Login Data:", data);
-    // Close the modal after login
-    document.getElementById("my_modal_3").close();
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password
+    };
+  
+    try {
+      const res = await axios.post("http://localhost:3000/user/login", userInfo);
+      if (res.data) {
+        toast.success("Login successful!");
+        setAuthUser(res.data);
+        document.getElementById("my_modal_3").close();
+  
+        setTimeout(() => {
+          localStorage.setItem("Users", JSON.stringify(res.data));
+          window.location.reload();
+        }, 3000);
+      }
+    } catch (e) {
+      if (e.response) {
+        toast.error("Error: " + e.response.data.message);
+      }
+    }
   };
+  
 
   return (
     <dialog id="my_modal_3" className="modal">
       <div className="modal-box">
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* Close Button */}
           <button
             type="button"
             onClick={() => document.getElementById("my_modal_3").close()}

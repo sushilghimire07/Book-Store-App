@@ -1,18 +1,39 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Login from "./Login";
+import { Link, useNavigate, useLocation } from "react-router-dom"; // Correct imports
 import { useForm } from "react-hook-form";
+import axios from 'axios';
+import toast from "react-hot-toast";
 
 function Signup() {
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+  const navigate = useNavigate(); // Add useNavigate for redirection
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Signup Data:", data);
-    // You can also close the modal here if needed
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+
+    try {
+      const res = await axios.post("http://localhost:3000/user/signup", userInfo);
+      if (res.data) {
+        toast.success('Signup successful!');
+        localStorage.setItem("Users", JSON.stringify(res.data));
+        navigate(from, { replace: true }); // Proper redirect
+      }
+    } catch (e) {
+      if (e.response) {
+        toast.error("Error: " + e.response.data.message);
+      }
+    }
   };
 
   return (
@@ -38,9 +59,9 @@ function Signup() {
                 type="text"
                 placeholder="Enter your full name"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-pink-400"
-                {...register("name", { required: true })}
+                {...register("fullname", { required: true })}
               />
-              {errors.name && (
+              {errors.fullname && (
                 <p className="text-sm text-red-500 mt-1">Name is required</p>
               )}
             </div>
@@ -81,23 +102,10 @@ function Signup() {
               >
                 Signup
               </button>
-              <p className="text-sm">
-                Have an account?{" "}
-                <button
-                  type="button"
-                  className="underline text-blue-500 hover:text-blue-700"
-                  onClick={() =>
-                    document.getElementById("my_modal_3").showModal()
-                  }
-                >
-                  Login
-                </button>
-              </p>
             </div>
           </form>
         </div>
       </dialog>
-      <Login />
     </>
   );
 }
