@@ -2,8 +2,33 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import  Navbar  from "../component/Navbar";
 import { Footer } from "../component/Footer";
+import axios from 'axios';
+import toast from "react-hot-toast";
 
 const Contact = () => {
+
+  
+    const onSubmit = async(data) => {
+      console.log("Contact Form Data:", data);
+      reset();
+      setTimeout(() => setSuccess(false), 4000);
+   
+  
+
+    try {
+      const res = await axios.post("http://localhost:3000/contact",data);
+      if (res.data) {
+        toast.success('Contact successful!');
+        localStorage.setItem("Users", JSON.stringify(res.data));
+      }
+    } catch (e) {
+      if (e.response) {
+        toast.error("Error: " + e.response.data.message);
+      }
+    }
+};
+
+
   const [success, setSuccess] = useState(false);
 
   const {
@@ -13,13 +38,7 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Contact Form Data:", data);
-    setSuccess(true);
-    reset();
-    setTimeout(() => setSuccess(false), 4000);
-  };
-
+  
   return (
     <>
       <Navbar />
@@ -45,7 +64,7 @@ const Contact = () => {
                 className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 
                 text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 
                 focus:ring-blue-500"
-                placeholder="John Doe"
+                placeholder="Enter your name : "
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
             </div>
@@ -64,7 +83,7 @@ const Contact = () => {
                 })}
                 className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700
                  text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="you@example.com"
+                placeholder="Enter your email : "
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
             </div>

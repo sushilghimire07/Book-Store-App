@@ -52,7 +52,7 @@ const About = () => {
 
           <div className="text-center">
             <Link
-              to={"/cource"}
+              to={"/course"}
               className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
             >
               Explore Our Collection

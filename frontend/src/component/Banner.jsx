@@ -17,10 +17,11 @@ export const Banner = () => {
               </span>
             </h1>
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolores error animi, iusto harum dolorum exercitationem eos, repudiandae provident culpa hic iste obcaecati? Consectetur quaerat quos provident natus debitis ea.
+            Books are windows to new worlds, expanding our knowledge and imagination.
+             Every page turned brings us closer to understanding ourselves and the world around us.
             </p>
           </div>
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <label className="input input-bordered flex items-center gap-2">
               <svg className="h-5 w-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g
@@ -36,8 +37,8 @@ export const Banner = () => {
               </svg>
               <input type="email" placeholder="Email" required className="grow" />
             </label>
-          </div>
-          <button className="btn btn-secondary mt-4">Secondary</button>
+          </div> */}
+          {/* <button className="btn btn-secondary mt-4">Send</button> */}
         </div>
 
         {/* Right Section */}

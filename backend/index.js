@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import bookRoute from './route/book.route.js'
 import cors from 'cors'
 import userRoute from './route/user.route.js'
+import contactRoute from './route/contact.route.js'
 
 
 dotenv.config();
@@ -27,6 +28,7 @@ try{
 //define route
 app.use('/book',bookRoute)
 app.use('/user',userRoute)
+app.use('/contact',contactRoute)
 
 
 
