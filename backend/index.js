@@ -3,10 +3,13 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose';
 import bookRoute from './route/book.route.js'
 import cors from 'cors'
+import userRoute from './route/user.route.js'
+
 
 dotenv.config();
 const app = express();
 app.use(cors())
+app.use(express.json())
 const mongodburi = process.env.MongoDBURI;
 
 
@@ -23,6 +26,7 @@ try{
 }
 //define route
 app.use('/book',bookRoute)
+app.use('/user',userRoute)
 
 
 
