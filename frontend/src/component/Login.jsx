@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import axios from 'axios';
+import axios from "axios";
 import toast from "react-hot-toast";
 import { useAuth } from "../context/AuthProvider";
 
@@ -17,16 +17,19 @@ function Login() {
   const onSubmit = async (data) => {
     const userInfo = {
       email: data.email,
-      password: data.password
+      password: data.password,
     };
-  
+
     try {
-      const res = await axios.post("http://localhost:3000/user/login", userInfo);
+      const res = await axios.post(
+        "http://localhost:3000/user/login",
+        userInfo
+      );
       if (res.data) {
         toast.success("Login successful!");
         setAuthUser(res.data);
         document.getElementById("my_modal_3").close();
-  
+
         setTimeout(() => {
           localStorage.setItem("Users", JSON.stringify(res.data));
           window.location.reload();
@@ -38,7 +41,6 @@ function Login() {
       }
     }
   };
-  
 
   return (
     <dialog id="my_modal_3" className="modal">

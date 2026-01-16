@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom"; // Correct imports
 import { useForm } from "react-hook-form";
-import axios from 'axios';
+import axios from "axios";
 import toast from "react-hot-toast";
 
 function Signup() {
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate(); // Add useNavigate for redirection
 
   const {
@@ -23,9 +23,12 @@ function Signup() {
     };
 
     try {
-      const res = await axios.post("http://localhost:3000/user/signup", userInfo);
+      const res = await axios.post(
+        "http://localhost:3000/user/signup",
+        userInfo
+      );
       if (res.data) {
-        toast.success('Signup successful!');
+        toast.success("Signup successful!");
         localStorage.setItem("Users", JSON.stringify(res.data));
         navigate(from, { replace: true }); // Proper redirect
       }
@@ -90,7 +93,9 @@ function Signup() {
                 {...register("password", { required: true })}
               />
               {errors.password && (
-                <p className="text-sm text-red-500 mt-1">Password is required</p>
+                <p className="text-sm text-red-500 mt-1">
+                  Password is required
+                </p>
               )}
             </div>
 

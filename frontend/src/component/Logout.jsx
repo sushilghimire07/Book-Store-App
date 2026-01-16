@@ -1,6 +1,6 @@
-import React from 'react';
-import { useAuth } from '../context/AuthProvider';
-import toast from 'react-hot-toast';
+import React from "react";
+import { useAuth } from "../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const Logout = () => {
   const [, setAuthUser] = useAuth();

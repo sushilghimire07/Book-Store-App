@@ -1,24 +1,26 @@
-import React from 'react';
-import banner from '../assets/Banner.png';
+import React from "react";
+import banner from "../assets/Banner.png";
 
 export const Banner = () => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4
-       flex flex-col md:flex-row items-center min-h-[70vh] pt-24 mb-10">
+      <div
+        className="max-w-screen-2xl container mx-auto md:px-20 px-4
+       flex flex-col md:flex-row items-center min-h-[70vh] pt-24 mb-10"
+      >
         {/* notice pt-24 added ^^^ */}
 
         {/* Left Section */}
         <div className="order-2 md:order-1 w-full md:w-1/2">
           <div className="space-y-8 mt-8 md:mt-20">
             <h1 className="text-3xl font-semibold">
-              Hello everyone here to learn <span className="text-pink-500">
-                something everyday..!!
-              </span>
+              Hello everyone here to learn{" "}
+              <span className="text-pink-500">something everyday..!!</span>
             </h1>
             <p className="text-lg">
-            Books are windows to new worlds, expanding our knowledge and imagination.
-             Every page turned brings us closer to understanding ourselves and the world around us.
+              Books are windows to new worlds, expanding our knowledge and
+              imagination. Every page turned brings us closer to understanding
+              ourselves and the world around us.
             </p>
           </div>
           {/* <div className="mt-4">

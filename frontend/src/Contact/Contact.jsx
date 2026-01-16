@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import  Navbar  from "../component/Navbar";
+import Navbar from "../component/Navbar";
 import { Footer } from "../component/Footer";
-import axios from 'axios';
+import axios from "axios";
 import toast from "react-hot-toast";
 
 const Contact = () => {
-
-  
-    const onSubmit = async(data) => {
-      console.log("Contact Form Data:", data);
-      reset();
-      setTimeout(() => setSuccess(false), 4000);
-   
-  
+  const onSubmit = async (data) => {
+    console.log("Contact Form Data:", data);
+    reset();
+    setTimeout(() => setSuccess(false), 4000);
 
     try {
-      const res = await axios.post("http://localhost:3000/contact",data);
+      const res = await axios.post("http://localhost:3000/contact", data);
       if (res.data) {
-        toast.success('Contact successful!');
+        toast.success("Contact successful!");
         localStorage.setItem("Users", JSON.stringify(res.data));
       }
     } catch (e) {
@@ -26,8 +22,7 @@ const Contact = () => {
         toast.error("Error: " + e.response.data.message);
       }
     }
-};
-
+  };
 
   const [success, setSuccess] = useState(false);
 
@@ -38,18 +33,21 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  
   return (
     <>
       <Navbar />
 
       <section className="min-h-screen py-16 px-4 bg-white dark:bg-gray-900 mt-10 mb-10">
         <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-xl p-10">
-          <h2 className="text-3xl font-bold text-center mb-8 text-black dark:text-white">Contact Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-black dark:text-white">
+            Contact Us
+          </h2>
 
           {success && (
-            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded 
-            mb-6 text-center">
+            <div
+              className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded 
+            mb-6 text-center"
+            >
               Your message has been sent successfully!
             </div>
           )}
@@ -57,7 +55,9 @@ const Contact = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Name */}
             <div>
-              <label className="block mb-1 font-medium text-black dark:text-white">Full Name</label>
+              <label className="block mb-1 font-medium text-black dark:text-white">
+                Full Name
+              </label>
               <input
                 type="text"
                 {...register("name", { required: "Name is required" })}
@@ -66,12 +66,18 @@ const Contact = () => {
                 focus:ring-blue-500"
                 placeholder="Enter your name : "
               />
-              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
 
             {/* Email */}
             <div>
-              <label className="block mb-1 font-medium text-black dark:text-white">Email Address</label>
+              <label className="block mb-1 font-medium text-black dark:text-white">
+                Email Address
+              </label>
               <input
                 type="email"
                 {...register("email", {
@@ -85,12 +91,18 @@ const Contact = () => {
                  text-black dark:text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your email : "
               />
-              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
 
             {/* Subject */}
             <div>
-              <label className="block mb-1 font-medium text-black dark:text-white">Subject</label>
+              <label className="block mb-1 font-medium text-black dark:text-white">
+                Subject
+              </label>
               <input
                 type="text"
                 {...register("subject", { required: "Subject is required" })}
@@ -99,12 +111,18 @@ const Contact = () => {
                 focus:ring-2 focus:ring-blue-500"
                 placeholder="Reason for contacting"
               />
-              {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>}
+              {errors.subject && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.subject.message}
+                </p>
+              )}
             </div>
 
             {/* Message */}
             <div>
-              <label className="block mb-1 font-medium text-black dark:text-white">Message</label>
+              <label className="block mb-1 font-medium text-black dark:text-white">
+                Message
+              </label>
               <textarea
                 rows="5"
                 {...register("message", {
@@ -120,14 +138,18 @@ const Contact = () => {
                 placeholder="Write your message here..."
               />
               {errors.message && (
-                <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.message.message}
+                </p>
               )}
             </div>
 
             {/* Date & Time (optional) */}
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex-1">
-                <label className="block mb-1 font-medium text-black dark:text-white">Preferred Date (optional)</label>
+                <label className="block mb-1 font-medium text-black dark:text-white">
+                  Preferred Date (optional)
+                </label>
                 <input
                   type="date"
                   {...register("date")}
@@ -137,7 +159,9 @@ const Contact = () => {
                 />
               </div>
               <div className="flex-1">
-                <label className="block mb-1 font-medium text-black dark:text-white">Preferred Time (optional)</label>
+                <label className="block mb-1 font-medium text-black dark:text-white">
+                  Preferred Time (optional)
+                </label>
                 <input
                   type="time"
                   {...register("time")}
