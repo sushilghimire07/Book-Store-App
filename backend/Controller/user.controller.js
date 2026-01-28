@@ -1,53 +1,88 @@
 import User from "../model/user.model.js";
-import bcryptjs from "bcryptjs";
+import bcrypt from "bcryptjs";
 
+/* ===================== SIGNUP ===================== */
 export const signup = async (req, res) => {
   try {
     const { fullname, email, password } = req.body;
 
-    const user = await User.findOne({ email });
-    if (user) {
-      return res.status(400).json({ message: "User already exist..!!" });
+    // Validation
+    if (!fullname || !email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+      });
     }
-    const hashpassword = await bcryptjs.hash(password, 10);
-    const createdUser = new User({
+
+    // Check existing user
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(409).json({
+        success: false,
+        message: "User already exists",
+      });
+    }
+
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Create user
+    const user = await User.create({
       fullname,
       email,
-      password: hashpassword,
+      password: hashedPassword,
     });
-    await createdUser.save();
-    res.status(200).json({
-      message: "User created sucessfully..!!",
+
+    return res.status(201).json({
+      success: true,
+      message: "User created successfully",
       user: {
-        _id: createdUser._id,
-        fullname: createdUser.fullname,
-        email: createdUser.email,
+        _id: user._id,
+        fullname: user.fullname,
+        email: user.email,
       },
     });
-  } catch (e) {
-    console.log("Error : " + e);
-    res.status(500).json({ message: "Internal server error..!!" });
+  } catch (error) {
+    console.error("Signup Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 };
+
+/* ===================== LOGIN ===================== */
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    // Validation
+    if (!email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "Email and password are required",
+      });
+    }
+
     const user = await User.findOne({ email });
-
     if (!user) {
-      return res
-        .status(400)
-        .json({ message: "Invalid username or password..!!" });
+      return res.status(401).json({
+        success: false,
+        message: "Invalid email or password",
+      });
     }
 
-    const isMatch = await bcryptjs.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res
-        .status(400)
-        .json({ message: "Invalid username or password..!!" });
+      return res.status(401).json({
+        success: false,
+        message: "Invalid email or password",
+      });
     }
 
-    res.status(200).json({
+    return res.status(200).json({
+      success: true,
       message: "Login successful",
       user: {
         _id: user._id,
@@ -55,8 +90,12 @@ export const login = async (req, res) => {
         email: user.email,
       },
     });
-  } catch (e) {
-    console.log("Error : " + e);
-    res.status(500).json({ message: "Internal server error..!!" });
+  } catch (error) {
+    console.error("Login Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 };
