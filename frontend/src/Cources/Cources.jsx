@@ -6,6 +6,7 @@ import Course from "../component/Course";
 const Cources = () => {
   return (
     <>
+     
       <Navbar />
       <div className="min-h-screen">
         <Course />
